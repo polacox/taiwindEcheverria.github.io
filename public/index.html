@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burguer</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="w-[1920px] xsm:w-full mx-auto">
+        <nav class="bg-gray-800 flex justify-between lg:justify-start items-center">
+            <div class="logo flex-initial p-2 w-1/6">
+                <img src="img/logo.png" width="100" alt="">
+            </div>
+            <div class="links lg:block hidden w-1/6 md:w-4/6">
+                <ul class="flex menu items-center justify-center gap-5">
+                    <li><a href="index.html" class="link">Inicio</a></li>
+                    <li><a href="menu.html" class="link">Menu</a></li>
+                    <li><a href="nosotros.html"class="link">Nosotros</a></li>
+                    <li><a href="ordenar.html"class="border-4 border-yellow-400 text-white font-bold p-2 rounded-full align-middle transition duration-500 hover:bg-white hover:text-black">Ordenar</a></li>
+                </ul>
+            </div>
+
+            <div class="block lg:hidden w-1/6 lg:w-4/6">
+                <a href="#" class="link" id="mobile-menu">Menu</a>
+
+                <ul class="mobile-links hidden w-full absolute z-50 left-0 text-center bg-gray-800">
+                    <li><a href="index.html" class="link">Inicio</a></li>
+                    <li><a href="menu.html" class="link">Menu</a></li>
+                    <li><a href="nosotros.html"class="link">Nosotros</a></li>
+                    <li><a href="ordenar.html"class="my-4 inline-block border-4 border-yellow-400 text-white font-bold p-2 rounded-full align-middle transition duration-500 hover:bg-white hover:text-black">Ordenar</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="header">
+            <img src="img/menu.jpg" alt="">
+        </div>
+
+        <section>
+            <div class="bg-wave-pattern h-6 bg-repeat-x relative -top-2"></div>
+            <div class="bg-wave-pattern-dots text-center p-4 flex md:flex-row flex-col gap-3 justify-center">
+                <a href="#" class="inline-block py-3 px-16 bg-red-500 text-white font-bold border-transparent border-8 text-2xl rounded-3xl hover:border-gray-200 hover:bg-white hover:text-black transition duration-200">Ordenar</a>
+            </div>
+            <div class="bg-wave-pattern bg-repeat-x h-6 relative top-2"></div>
+        </section>
+        
+        <!-- SECCIÓN DE CARDS -->
+        <section class="bg-pattern-characters-red py-28">
+            <div class="lg:container 2xl:w-3/5 mx-auto md:flex gap-5 md:w-full p-3 ">
+                <div class="left bg-character-mario bg-no-repeat bg-contain bg-top w-5/6 md:w-1/2 pt-52 mx-auto">
+                    
+                </div>
+                <div class="right w-5/6 md:w-1/2 text-center mx-auto">
+                    <h2 class="font-black text-black text-6xl py-8">¡Te esperamos con las brasas encendidas y el sabor elevado!</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-yellow-dots">
+            <div class="bg-wave-pink bg-repeat-x h-6 relative -top-4"></div>
+            <div class="xsm:w-full sm:container w-2/3 mx-auto md:flex justify-center items-center text-center py-6">
+                <div class="left xl:w-1/3 lg:w-1/2 p-5">
+                    <h4 class="text-yellow-900 font-black   sm:text-4xl">
+                        VEN <br> Y DISFRUTA<br> DE UNA HAMBURGUESA
+                    </h4>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        const menuButton = document.querySelector('#mobile-menu');
+
+        menuButton.addEventListener('click', e  => {
+            const menu = document.querySelector('.mobile-links');
+
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

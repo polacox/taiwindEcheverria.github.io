@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordena tu Hamburguesa</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="w-[1920px] xsm:w-full mx-auto">
+        <nav class="bg-gray-800 flex justify-between lg:justify-start items-center">
+            <div class="logo flex-initial  w-1/6">
+                <img src="img/logo.png" width="100" alt="">
+            </div>
+            <div class="links">
+                <ul class="flex menu items-center justify-center gap-5 text-white">
+                    <li><a href="index.html" class="link">Inicio</a></li>
+                    <li><a href="menu.html" class="link">Menu</a></li>
+                    <li><a href="nosotros.html"class="link">Nosotros</a></li>
+                    <li><a href="ordenar.html"class="border-4 border-yellow-400 text-white font-bold p-2 rounded-full align-middle transition duration-500 hover:bg-white hover:text-black">Ordenar</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="max-w-md mx-auto bg-white p-8 rounded-md shadow-md">
+        <h1 class="text-3xl font-semibold mb-4">Ordena tu Hamburguesa</h1>
+
+        <form action="procesar_orden.php" method="POST">
+            <!-- Campos del formulario -->
+            <div class="mb-4">
+                <label for="tipo_hamburguesa" class="block text-gray-700 text-sm font-bold mb-2">Tipo de Hamburguesa</label>
+                <select id="tipo_hamburguesa" name="tipo_hamburguesa" class="w-full p-2 border rounded">
+                    <option value="clasica">Hamburguesa Clásica</option>
+                    <option value="bbq">Hamburguesa BBQ</option>
+                    <option value="vegana">Hamburguesa Vegana</option>
+                    <!-- Agrega más opciones según sea necesario -->
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="extras" class="block text-gray-700 text-sm font-bold mb-2">Extras</label>
+                <div class="flex">
+                    <input type="checkbox" id="queso" name="extras[]" value="queso" class="mr-2">
+                    <label for="queso" class="mr-4">Queso</label>
+
+                    <input type="checkbox" id="bacon" name="extras[]" value="bacon" class="mr-2">
+                    <label for="bacon">Bacon</label>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="cantidad" class="block text-gray-700 text-sm font-bold mb-2">Cantidad</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" value="1" class="w-full p-2 border rounded">
+            </div>
+
+            <div class="mb-4">
+                <label for="nombre_cliente" class="block text-gray-700 text-sm font-bold mb-2">Nombre del Cliente</label>
+                <input type="text" id="nombre_cliente" name="nombre_cliente" class="w-full p-2 border rounded">
+            </div>
+
+            <div class="mb-4">
+                <label for="direccion_entrega" class="block text-gray-700 text-sm font-bold mb-2">Dirección de Entrega</label>
+                <textarea id="direccion_entrega" name="direccion_entrega" rows="3" class="w-full p-2 border rounded"></textarea>
+            </div>
+
+            <button type="submit" class="bg-yellow-500 text-white font-bold py-2 px-4 rounded hover:bg-yellow-600">Ordenar</button>
+        </form>
+    </div>
+
+</body>
+</html>
